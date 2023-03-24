@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tamagotchi Cat</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Tamagotchi Cat</h1>
+      <input id="cat-name" type="text" placeholder="Enter name">
+    </div>
+    <div class="cat-container">
+        <div class="cat-name-bubble"></div>
+      <img id="cat-image" src="img/cat.svg" alt="Cat">
+    </div>
+    <div class="buttons">
+        <img id="sleep-button" src="img/cat-bed.svg" alt="Sleep">
+        <img id="eat-button" src="img/food-container.svg" alt="Eat">
+        <img id="play-button" src="img/wool-ball.svg" alt="Play">
+      </div>
+    <div class="status-bars">
+      <div class="status-bar-container">
+        <div id="tiredness-bar" class="status-bar"></div>
+        <p>Tiredness</p>
+      </div>
+      <div class="status-bar-container">
+        <div id="hunger-bar" class="status-bar"></div>
+        <p>Hunger</p>
+      </div>
+      <div class="status-bar-container">
+        <div id="boredom-bar" class="status-bar"></div>
+        <p>Boredom</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
