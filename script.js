@@ -1,6 +1,7 @@
 const catImage = document.getElementById("cat-image");
 const catNameBubble = document.querySelector(".cat-name-bubble");
 const catNameInput = document.getElementById("cat-name");
+const TailAnimation = document.querySelector(".animation-tail")
 
 let catName = "Give name";
 catNameInput.addEventListener("input", () => {
@@ -11,6 +12,20 @@ catNameInput.addEventListener("input", () => {
 function updateCatName() {
   catNameBubble.textContent = catName;
 }
+
+function animation() {
+  TailAnimation.classList.remove("animation-tail")
+  TailAnimation.classList.add("animation-do")
+}
+
+TailAnimation.addEventListener("click", animation)
+
+function animationDone() { 
+  TailAnimation.classList.remove("animation-do") 
+  TailAnimation.classList.add("animation-tail")
+}
+
+TailAnimation.addEventListener("animationend", animationDone)
 
 let tirednessLevel = 50;
 let hungerLevel = 50;
@@ -78,10 +93,6 @@ function play() {
 }
 
 updateStatusBars();
-}
-
-function updateCatImage(imagePath) {
-catImage.src = imagePath;
 }
 
 function setupEventListeners() {
